@@ -6,6 +6,7 @@
 
 #include <stdint.h>
 #include "AssemblyModule.h"
+#include "SaveRegisters.h"
 
 extern int fourBytes;						// Import from AssemblyModule.s
 extern uint16_t twoBytes;				// Import from AssemblyModule.s
@@ -13,6 +14,8 @@ extern uint16_t twoBytes;				// Import from AssemblyModule.s
 uint32_t variableInC = 0xdeaf;
 
 int main() {
+	initTcb();
+	saveRegs();
 	fourBytes = 0xdeadbeef;	
 	noArgFunc();
 
