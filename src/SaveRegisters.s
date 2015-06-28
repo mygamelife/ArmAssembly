@@ -33,7 +33,7 @@
           THUMB
           
           AREA    MyCode, CODE, READONLY
-saveRegs	PROC
+saveRegs  PROC
           EXPORT  saveRegs
           IMPORT  initTcb
           IMPORT  task1Tcb
